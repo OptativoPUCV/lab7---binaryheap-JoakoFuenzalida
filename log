@@ -191,3 +191,24 @@ heap.c:75:11: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 eec18af
+Thu 11 May 2023 05:30:37 PM UTC: 
+ heap.c | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:72:12: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   72 |     return NULL;
+      |            ^~~~
+heap.c:69:6: note: declared here
+   69 | void heap_pop(Heap* pq){
+      |      ^~~~~~~~
+heap.c:75:3: error: unknown type name ‘in’; did you mean ‘int’?
+   75 |   in maximoHijo;
+      |   ^~
+      |   int
+heap.c:75:6: error: unused variable ‘maximoHijo’ [-Werror=unused-variable]
+   75 |   in maximoHijo;
+      |      ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6f1fc7e

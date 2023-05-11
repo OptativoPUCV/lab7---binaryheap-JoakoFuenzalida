@@ -71,8 +71,17 @@ void heap_pop(Heap* pq){
   {
     return NULL;
   }
+  int i = 0;
+  in maximoHijo;
+  
   pq->heapArray[0] = pq->heapArray[pq->size-1];
-  pq->size
+  pq->size--;
+
+  while(2 * i + 1 < pq->size)
+  {
+      
+  }
+  
   
 }
 
