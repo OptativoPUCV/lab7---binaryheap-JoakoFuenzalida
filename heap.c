@@ -18,7 +18,12 @@ typedef struct Heap{
 
 
 void* heap_top(Heap* pq){
-    return NULL;
+  if(pq -> size == 0)
+  {
+    return NULL;;
+  }
+  
+    return pq->heapArray[0].data;
 }
 
 
@@ -37,5 +42,5 @@ Heap* createHeap(){
   m -> heapArray = malloc(3 *sizeof(Heap));
   m-> size = 0;
   m -> capac = 3;
-   return m ;
+   return m;
 }
