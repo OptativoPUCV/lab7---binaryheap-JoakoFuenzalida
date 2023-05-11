@@ -229,3 +229,14 @@ heap.c:75:7: error: unused variable ‘maximoHijo’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 d217f5a
+Thu 11 May 2023 05:30:55 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:75:7: error: unused variable ‘maximoHijo’ [-Werror=unused-variable]
+   75 |   int maximoHijo;
+      |       ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e16ba9a
