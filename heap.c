@@ -20,7 +20,7 @@ typedef struct Heap{
 void* heap_top(Heap* pq){
   if(pq -> size == 0)
   {
-    return NULL;;
+    return NULL;
   }
   
     return pq->heapArray[0].data;
@@ -34,7 +34,19 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
+  int posicion = pq->size;
+  heapElemen aux;
+  int posPadre = (posicion - 1)/2; 
+  if(pq -> size == pq -> capac)
+  {
+    pq->heapArray = realloc(pq->heapArray, pq->capac+2+1)
+  }
 
+  if(pq->size == 0)
+  {
+    pq->heapArray[pq->size].data = data;
+    pq->heapArray[pq->size].priority = priority;
+  }
 }
 
 Heap* createHeap(){

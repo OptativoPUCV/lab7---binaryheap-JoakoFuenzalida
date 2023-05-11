@@ -33,3 +33,34 @@ Thu 11 May 2023 05:04:12 PM UTC:
  tests:  2|2
 total_score: 20/70
 efa5a71
+Thu 11 May 2023 05:13:45 PM UTC: 
+ heap.c | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:38:3: error: unknown type name ‘heapElemen’; did you mean ‘heapElem’?
+   38 |   heapElemen aux;
+      |   ^~~~~~~~~~
+      |   heapElem
+heap.c:42:58: error: expected ‘;’ before ‘}’ token
+   42 |     pq->heapArray = realloc(pq->heapArray, pq->capac+2+1)
+      |                                                          ^
+      |                                                          ;
+   43 |   }
+      |   ~                                                       
+heap.c:47:36: error: ‘data’ undeclared (first use in this function)
+   47 |     pq->heapArray[pq->size].data = data;
+      |                                    ^~~~
+heap.c:47:36: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:48:40: error: ‘priority’ undeclared (first use in this function)
+   48 |     pq->heapArray[pq->size].priority = priority;
+      |                                        ^~~~~~~~
+heap.c:39:7: error: unused variable ‘posPadre’ [-Werror=unused-variable]
+   39 |   int posPadre = (posicion - 1)/2;
+      |       ^~~~~~~~
+heap.c:38:14: error: unused variable ‘aux’ [-Werror=unused-variable]
+   38 |   heapElemen aux;
+      |              ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+426b162
