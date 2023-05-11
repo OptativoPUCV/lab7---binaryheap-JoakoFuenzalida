@@ -51,6 +51,20 @@ void heap_pop(Heap* pq){
   
   pq->heapArray[pq->size].data = data;
   pq->heapArray[pq->size].priority = priority;
+  pq->size++;
+
+  while(pq->heapArray[posicion].priority > pq->heapArray[posPadre].priority)
+  {
+    if(pq->heapArray[posicion].priority > pq->heapArray[posPadre].priority)
+    {
+      aux = pq->heapArray[posicion];
+      pq->heapArray[posicion] = pq->heapArray[posPadre];
+      pq->heapArray[posPadre] = aux;
+      posicion = posPadre;
+      posPadre = (posicion-1)/2;
+    }
+      
+  }
 }
 
 
