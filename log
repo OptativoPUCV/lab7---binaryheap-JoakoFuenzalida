@@ -167,3 +167,27 @@ Thu 11 May 2023 05:21:08 PM UTC:
  tests:  5|2
 total_score: 35/70
 480d73f
+Thu 11 May 2023 05:25:47 PM UTC: 
+ heap.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:72:12: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   72 |     return NULL;
+      |            ^~~~
+heap.c:69:6: note: declared here
+   69 | void heap_pop(Heap* pq){
+      |      ^~~~~~~~
+heap.c:75:5: error: statement with no effect [-Werror=unused-value]
+   75 |   pq->size
+      |   ~~^~~~~~
+heap.c:75:11: error: expected ‘;’ before ‘}’ token
+   75 |   pq->size
+      |           ^
+      |           ;
+   76 | 
+   77 | }
+      | ~          
+cc1: all warnings being treated as errors
+Compilation failed
+eec18af
