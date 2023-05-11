@@ -29,8 +29,9 @@ void* heap_top(Heap* pq){
 
 
 void heap_push(Heap* pq, void* data, int priority){
+  
   int posicion = pq->size;
-  heapElemen aux;
+  heapElem aux;
   int posPadre = (posicion - 1)/2; 
   
   if(pq -> size == pq -> capac)

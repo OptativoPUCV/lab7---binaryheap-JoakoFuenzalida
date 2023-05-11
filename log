@@ -148,3 +148,16 @@ heap.c:58:33: error: incompatible types when assigning to type ‘heapElem’ {a
       |                                 ^~~
 Compilation failed
 f9a34d3
+Thu 11 May 2023 05:20:58 PM UTC: 
+ heap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:39:58: error: expected ‘;’ before ‘}’ token
+   39 |     pq->heapArray = realloc(pq->heapArray, pq->capac+2+1)
+      |                                                          ^
+      |                                                          ;
+   40 |   }
+      |   ~                                                       
+Compilation failed
+6406b79
