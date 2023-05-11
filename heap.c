@@ -44,10 +44,16 @@ void heap_pop(Heap* pq){
 
   if(pq->size == 0)
   {
-    pq->heapArray[pq->size].data = data;
-    pq->heapArray[pq->size].priority = priority;
+    pq->heapArray[0].data = data;
+    pq->heapArray[0].priority = priority;
+    pq->size++;
   }
+  
+  pq->heapArray[pq->size].data = data;
+  pq->heapArray[pq->size].priority = priority;
 }
+
+
 
 Heap* createHeap(){
   Heap *m = malloc(3 *sizeof(Heap));
