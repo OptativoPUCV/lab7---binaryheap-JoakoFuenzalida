@@ -72,15 +72,12 @@ void heap_pop(Heap* pq){
     return;
   }
   int i = 0;
-  int mayorHijo =0;
+  //int mayorHijo =0;
   
   pq->heapArray[0] = pq->heapArray[pq->size-1];
   pq->size--;
 
-  while(2 * i + 1 < pq->size)
-  {
-      
-  }
+  
   
   
 }
