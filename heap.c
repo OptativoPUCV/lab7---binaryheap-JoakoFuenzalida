@@ -71,11 +71,39 @@ void heap_pop(Heap* pq){
   {
     return;
   }
-  //int i = 0;
-  //int mayorHijo =0;
-  
+  heapElem aux;
+  int posicion = 0;
+  int menorHijo = 1;
+  int mayorHijo =2;
+
   pq->heapArray[0] = pq->heapArray[pq->size-1];
   pq->size--;
+
+  while(menorHijo < pq->size)
+  {
+   int nodo = menorHijo; 
+
+    if(menorHijo < pq->size && pq->heapArray[mayorHijo].priority > pq->heapArray[menorHijo].priority)
+    {
+      nodo = mayorHijo;
+    }
+
+    if(pq->heapArray[posicion].priority > pq -> heapArray[nodo].priority)
+    {
+      break;
+    }
+     aux = pq->heapArray[posicion];
+    pq->heapArray[posicion] = pq->heapArray[nodo];
+    pq->heapArray[nodo] = aux;
+
+    posicion = nodo;
+
+    menorHijo = menorHijo * 2 +1;
+    mayorHijo = mayorHijo *2 +1;
+    
+      
+  }
+
 
   
   
