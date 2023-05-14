@@ -291,3 +291,15 @@ Sun 14 May 2023 02:18:07 AM UTC:
  tests:  6|1
 total_score: 60/70
 ac593c2
+Sun 14 May 2023 02:18:57 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:39:42: error: invalid operands to binary * (have ‘heapElem *’ {aka ‘struct nodo *’} and ‘int’)
+   39 |     pq->heapArray = realloc(pq->heapArray*2+1, pq->capac*2+1);
+      |                             ~~~~~~~~~~~~~^
+      |                               |
+      |                               heapElem * {aka struct nodo *}
+Compilation failed
+b196a3f
