@@ -72,7 +72,7 @@ void heap_pop(Heap* pq){
     return;
   }
   int i = 0;
-  int maximoHijo;
+  int mayorHijo =00;
   
   pq->heapArray[0] = pq->heapArray[pq->size-1];
   pq->size--;
